@@ -12,4 +12,18 @@
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
     <RepositoryUrl>https://github.com/SafetyCone/R5T.F0113.git</RepositoryUrl>
   </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\R5T.F0000\source\R5T.F0000\R5T.F0000.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0002\source\R5T.F0002\R5T.F0002.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0016\source\R5T.F0016.F001\R5T.F0016.F001.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0020\source\R5T.F0020\R5T.F0020.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0114\source\R5T.F0114\R5T.F0114.csproj" />
+    <ProjectReference Include="..\..\..\R5T.F0115\source\R5T.F0115\R5T.F0115.csproj" />
+    <ProjectReference Include="..\..\..\R5T.NG0010\source\R5T.NG0010\R5T.NG0010.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0132\source\R5T.T0132\R5T.T0132.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0172\source\R5T.T0172\R5T.T0172.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0174\source\R5T.T0174\R5T.T0174.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0175\source\R5T.T0175\R5T.T0175.csproj" />
+    <ProjectReference Include="..\..\..\R5T.T0176\source\R5T.T0176\R5T.T0176.csproj" />
+  </ItemGroup>
 </Project>
