@@ -10,10 +10,10 @@ using R5T.F0115;
 using R5T.T0132;
 using R5T.T0172;
 using R5T.T0172.Extensions;
-using R5T.T0175;
-using R5T.T0175.Extensions;
 using R5T.T0176;
 using R5T.T0176.Extensions;
+using R5T.T0180;
+using R5T.T0180.Extensions;
 
 
 namespace R5T.F0113
@@ -96,10 +96,11 @@ namespace R5T.F0113
             return assembly;
         }
 
-        public AssemblyFilePath[] Get_AssemblyFilePaths(DirectoryPath directoryPath)
+        public IAssemblyFilePath[] Get_AssemblyFilePaths(
+            IDirectoryPath directoryPath)
         {
             var output = Instances.FileSystemOperator.FindChildFilesInDirectoryByFileExtension(
-                directoryPath,
+                directoryPath.Value,
                 Instances.FileExtensions.Dll)
                 .Select(x => x.ToAssemblyFilePath())
                 .Now();
@@ -107,7 +108,7 @@ namespace R5T.F0113
             return output;
         }
 
-        public AssemblyFilePath[] Get_AssemblyFilePaths(IEnumerable<DirectoryPath> directoryPaths)
+        public IAssemblyFilePath[] Get_AssemblyFilePaths(IEnumerable<DirectoryPath> directoryPaths)
         {
             var distinctDirectoryPaths = directoryPaths
                 .Distinct()
@@ -120,7 +121,7 @@ namespace R5T.F0113
             return output;
         }
 
-        public AssemblyFilePath[] Get_AssemblyFilePaths(
+        public IAssemblyFilePath[] Get_AssemblyFilePaths(
             IAssemblyFilePath assemblyFilePath,
             IEnumerable<DirectoryPath> runtimeDirectoryPaths)
         {
