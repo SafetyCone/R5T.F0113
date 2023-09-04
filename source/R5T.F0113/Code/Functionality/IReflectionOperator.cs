@@ -108,7 +108,7 @@ namespace R5T.F0113
             return output;
         }
 
-        public IAssemblyFilePath[] Get_AssemblyFilePaths(IEnumerable<DirectoryPath> directoryPaths)
+        public IAssemblyFilePath[] Get_AssemblyFilePaths(IEnumerable<IDirectoryPath> directoryPaths)
         {
             var distinctDirectoryPaths = directoryPaths
                 .Distinct()
@@ -123,7 +123,7 @@ namespace R5T.F0113
 
         public IAssemblyFilePath[] Get_AssemblyFilePaths(
             IAssemblyFilePath assemblyFilePath,
-            IEnumerable<DirectoryPath> runtimeDirectoryPaths)
+            IEnumerable<IDirectoryPath> runtimeDirectoryPaths)
         {
             var assemblyFileDirectoryPath = Instances.PathOperator.GetFileParentDirectoryPath(assemblyFilePath.Value)
                 .ToDirectoryPath();
@@ -158,7 +158,7 @@ namespace R5T.F0113
 
         public MetadataLoadContext Get_MetadataLoadContext(
             IAssemblyFilePath assemblyFilePath,
-            IEnumerable<DirectoryPath> runtimeDirectoryPaths)
+            IEnumerable<IDirectoryPath> runtimeDirectoryPaths)
         {
             var assemblyFilePaths = this.Get_AssemblyFilePaths(
                 assemblyFilePath,

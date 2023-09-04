@@ -107,7 +107,7 @@ namespace R5T.F0113
             return isWindowsProject;
         }
 
-        public IEnumerable<DirectoryPath> Get_RuntimeDirectories(
+        public IEnumerable<IDirectoryPath> Get_RuntimeDirectories(
             RuntimeDependencyInclusions inclusions,
             DotnetRuntimeDirectoryPaths dotnetRuntimeDirectoryPaths)
         {
@@ -126,7 +126,7 @@ namespace R5T.F0113
             return output;
         }
 
-        public IEnumerable<DirectoryPath> Get_RuntimeDirectories(RuntimeDependencyInclusions inclusions)
+        public IEnumerable<IDirectoryPath> Get_RuntimeDirectories(RuntimeDependencyInclusions inclusions)
         {
             var dotnetRuntimeDirectoryPaths = Instances.RuntimeDirectoryPathOperator.GetDotnetRuntimeDirectoryPaths();
 
