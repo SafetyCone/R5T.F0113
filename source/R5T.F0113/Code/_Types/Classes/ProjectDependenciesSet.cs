@@ -5,8 +5,9 @@ using R5T.T0142;
 using R5T.T0172;
 
 
+/// <see cref="R5T.F0113.Documentation"/>
 namespace R5T.F0113
-{
+{    
     [DataTypeMarker]
     public class ProjectDependenciesSet
     {
