@@ -48,7 +48,7 @@ namespace R5T.F0113
             IEnumerable<IAssemblyFilePath> assemblyFilePaths)
         {
             var duplicates = assemblyFilePaths
-                .GroupBy(filePath => Instances.PathOperator.GetFileName(filePath.Value))
+                .GroupBy(filePath => Instances.PathOperator.Get_FileName(filePath.Value))
                 .Where(group => group.Count() > 1)
                 .Select(group => group.First())
                 .Now();
@@ -125,7 +125,7 @@ namespace R5T.F0113
             IAssemblyFilePath assemblyFilePath,
             IEnumerable<IDirectoryPath> runtimeDirectoryPaths)
         {
-            var assemblyFileDirectoryPath = Instances.PathOperator.GetFileParentDirectoryPath(assemblyFilePath.Value)
+            var assemblyFileDirectoryPath = Instances.PathOperator.Get_ParentDirectoryPath_ForFile(assemblyFilePath.Value)
                 .ToDirectoryPath();
 
             var output = this.Get_AssemblyFilePaths(
