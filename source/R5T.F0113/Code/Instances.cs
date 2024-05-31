@@ -6,7 +6,7 @@ namespace R5T.F0113
     public static class Instances
     {
         public static F0000.IEnumerableOperator EnumerableOperator => F0000.EnumerableOperator.Instance;
-        public static F0000.IFileExtensions FileExtensions => F0000.FileExtensions.Instance;
+        public static L0066.IFileExtensions FileExtensions => L0066.FileExtensions.Instance;
         public static F0000.IFileSystemOperator FileSystemOperator => F0000.FileSystemOperator.Instance;
         public static F0020.IFrameworkNames FrameworkNames => F0020.FrameworkNames.Instance;
         public static F0002.IPathOperator PathOperator => F0002.PathOperator.Instance;
